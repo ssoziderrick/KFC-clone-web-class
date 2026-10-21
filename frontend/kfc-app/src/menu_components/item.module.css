@@ -1,0 +1,487 @@
+/* =====================================
+   GLOBAL PRODUCT STYLING
+===================================== */
+
+.innerbox {
+    font-family: "Times New Roman", Times, serif;
+    box-sizing: border-box;
+    min-width: 0;
+    margin-bottom: 25px;
+    padding: 16px;
+    background: #ffffff;
+    border: 1px solid #e3dada;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* Hover effect on every product card */
+.innerbox:hover {
+    transform: translateY(-7px);
+    border-color: #8b001b;
+    box-shadow: 0 10px 22px rgba(90, 0, 18, 0.18);
+}
+
+/* =====================================
+   PRODUCT IMAGE RED FRAME
+===================================== */
+
+.innerbox > img {
+    display: block;
+    width: 100%;
+    height: 240px;
+    padding: 8px;
+    box-sizing: border-box;
+    object-fit: contain;
+    object-position: center;
+    background-color: #fff5f5;
+    border: 2px solid #8b001b;
+    border-radius: 3px;
+    cursor: pointer;
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.innerbox:hover > img {
+    background-color: #ffe6e9;
+    border-color: #5e0012;
+}
+
+.innerbox > img:hover {
+    transform: scale(1.025);
+}
+
+/* =====================================
+   PRODUCT TITLE AND DESCRIPTION
+===================================== */
+
+.title {
+    min-height: 38px;
+    margin: 14px 0 8px;
+    color: #292020;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+.innerbox > div > p {
+    font-family: "Times New Roman", Times, serif;
+}
+
+.desc {
+    width: 100%;
+    min-height: 55px;
+    margin-top: 8px;
+    color: #5b5353;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.innerbox > div > h3:not(.title) {
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* =====================================
+   ADD TO CART AREA
+===================================== */
+
+.cartbutton {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    width: fit-content;
+    max-width: 100%;
+    min-height: 35px;
+    margin-top: 12px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    color: #ffffff;
+}
+
+/* Remove default heading spacing around the controls */
+.cartbutton > h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+/* Smaller, rectangular Add to Cart button */
+.addto {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 34px;
+    margin: 0;
+    padding: 7px 13px;
+    background: #790018;
+    color: #ffffff;
+    border: 1px solid #790018;
+    border-radius: 3px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.addto:hover {
+    background: #4f0010;
+    border-color: #4f0010;
+}
+
+/* =====================================
+   SQUARE PLUS AND MINUS BUTTONS
+===================================== */
+
+.plus,
+.minus {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+    padding: 0;
+    background: #790018;
+    color: #ffffff;
+    border: 1px solid #790018;
+    border-radius: 2px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.plus:hover,
+.minus:hover {
+    background: #4f0010;
+    transform: scale(1.06);
+}
+
+/* =====================================
+   CART ICON
+===================================== */
+
+.cartbutton > img {
+    width: 25px;
+    height: 25px;
+    padding: 4px;
+    box-sizing: border-box;
+    background: #fff0f2;
+    border: 1px solid #790018;
+    border-radius: 3px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.cartbutton > img:hover {
+    background: #ffd9df;
+}
+
+/* =====================================
+   PRODUCT GRID
+===================================== */
+
+.itembox {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* =====================================
+   MENU SIDEBAR
+===================================== */
+
+.sidebox {
+    position: sticky;
+    top: 150px;
+    height: max-content;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.sidebox > img {
+    width: 70px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.sidebox > h3 {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.sidebox > h3:hover {
+    color: #790018;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* =====================================
+   SEARCH BOX
+===================================== */
+
+.searchbox {
+    width: 87%;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #790018;
+}
+
+.searchbox > input {
+    width: 216px;
+    max-width: 100%;
+    height: 36px;
+    padding: 0 12px;
+    box-sizing: border-box;
+    border: 1px solid #b8a0a4;
+    border-radius: 3px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+}
+
+/* =====================================
+   SINGLE PRODUCT PAGE
+===================================== */
+
+.singleupperbox {
+    display: grid;
+    grid-template-columns: minmax(0, 58%) minmax(0, 40%);
+    gap: 2%;
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.mainsinglebox > img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.recombox {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.recombox > div {
+    min-width: 0;
+}
+
+.recombox > div > img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.recombox > div > p {
+    font-size: 14px;
+}
+
+.pepsi {
+    margin-top: 80px;
+    border-top: 3px solid #790018;
+}
+
+.singledesc {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 19px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media screen and (min-width: 781px) and (max-width: 1100px) {
+    .itembox {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    .innerbox > img {
+        height: 210px;
+    }
+
+    .title {
+        font-size: 19px;
+    }
+
+    .singleupperbox {
+        width: 95%;
+    }
+
+    .singledesc {
+        font-size: 17px;
+    }
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media screen and (max-width: 780px) {
+    .sidebox {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        width: 100%;
+        padding: 12px;
+        box-sizing: border-box;
+        background: #fff5f5;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+        font-size: 12px;
+        position: static;
+    }
+
+    .sidebox > img {
+        display: none;
+    }
+
+    .itembox {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 13px;
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+
+    .innerbox {
+        padding: 9px;
+        margin-bottom: 12px;
+    }
+
+    .innerbox > img {
+        height: 145px;
+        padding: 5px;
+        border-width: 2px;
+    }
+
+    .title {
+        min-height: 0;
+        font-size: 16px;
+        line-height: 1.3;
+    }
+
+    .desc {
+        min-height: 0;
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    .addto {
+        min-height: 31px;
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+
+    .plus,
+    .minus {
+        width: 26px;
+        height: 26px;
+        margin: 1px;
+        font-size: 17px;
+    }
+
+    .cartbutton {
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+
+    .cartbutton > img {
+        width: 23px;
+        height: 23px;
+    }
+
+    .recombox {
+        gap: 10px;
+    }
+
+    .recombox > div > p {
+        display: none;
+    }
+
+    .recombox > div > h3 {
+        font-size: 12px;
+    }
+
+    .reccomtitle {
+        font-size: 14px;
+    }
+
+    .pepsi {
+        margin-top: 40px;
+        font-size: 15px;
+    }
+
+    .singledesc {
+        font-size: 13px;
+        text-align: left;
+    }
+
+    .singleupperbox {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        width: 94%;
+    }
+
+    .searchbox {
+        width: 100%;
+    }
+
+    .searchbox > input {
+        width: 100%;
+    }
+}
+
+/* =====================================
+   VERY SMALL PHONES
+===================================== */
+
+@media screen and (max-width: 380px) {
+    .itembox {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .innerbox > img {
+        height: 220px;
+    }
+
+    .title {
+        font-size: 19px;
+    }
+
+    .desc {
+        font-size: 14px;
+    }
+
+    .cartbutton {
+        flex-wrap: nowrap;
+    }
+}
